@@ -1,6 +1,6 @@
 package br.com.caelum.conta;
 
-public class Conta {
+abstract class Conta {
 
 	protected double saldo;
 	
@@ -16,9 +16,7 @@ public class Conta {
 		return this.saldo -= valor;
 	}
 	
-	public double atualiza(double taxa) {
-		return this.saldo += this.saldo * taxa;
-	}
+	public abstract double atualiza(double taxa);
 	
 	public void setSaldo(double saldo) {
 		this.saldo = saldo;
