@@ -19,4 +19,8 @@ public class Conta {
 	public double atualiza(double taxa) {
 		return this.saldo += this.saldo * taxa;
 	}
+	
+	public void setSaldo(double saldo) {
+		this.saldo = saldo;
+	}
 }
