@@ -6,7 +6,11 @@ public class ContaPoupanca extends Conta{
 		return saldo += saldo * (taxa * 3);
 	}
 	
-	public double deposita(double valor) {
-		return saldo += valor - 0.1;
+	public void deposita(double valor) {
+		if (valor < 0) {
+            throw new IllegalArgumentException();
+        } else {
+            this.saldo += valor - 0.1;        
+        }    
 	}
 }
